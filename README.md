@@ -1,70 +1,157 @@
-# Getting Started with Create React App
+# Analytix - Social Media Analytics Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive social media analytics dashboard that leverages Langflow, DataStax Astra DB, and GPT integration for real-time engagement analysis and AI-powered insights.
 
-## Available Scripts
+## Live Application
+- Production URL: https://analytixs.vercel.app/
+- Status: Active
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+Analytix is a powerful analytics module that processes and analyzes engagement data from social media accounts. It combines DataStax Astra DB's vector database capabilities with Langflow's intelligent workflows to provide real-time analytics and GPT-powered insights.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Core Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Real-time Analytics Dashboard**
+  - Performance overview cards
+  - Interactive data visualizations
+  - Detailed data grid with advanced filtering
+  - Custom metric tracking
 
-### `npm test`
+- **AI-Powered Analysis**
+  - GPT-integrated insights generation
+  - Intelligent chatbot assistant
+  - Automated performance analysis
+  - Post type comparison analytics
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Data Management**
+  - Real-time data processing
+  - Advanced filtering and search
+  - Sortable and paginated data views
+  - Custom metric calculations
 
-### `npm run build`
+## Technical Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: React.js
+- **Backend**: Node.js with Express
+- **Database**: DataStax Astra DB
+- **AI Integration**: 
+  - Langflow for workflow orchestration
+  - Groq's llama-3-1-8b-instant for insights
+- **Deployment**: Render Web Services
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (Latest LTS version)
+- DataStax Astra DB account
+- Groq's API access
+- Langflow installation
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+```bash
+git clone https://github.com/biplawofficial/level_supermind_frontend.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Configure environment variables:
+```bash
+cp .env.example .env
+```
 
-## Learn More
+Required environment variables:
+```
+ASTRA_DB_TOKEN=your_token
+BASE_API_URL=your_endpoint
+FLOW_ID=your_key
+APPLICATION_TOKEN=your_key
+LANGFLOW_API_URL=your_url
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## System Architecture
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Frontend Components
+- Landing page with feature showcase
+- Analytics dashboard with performance cards
+- Detailed Data visualization section
+- Chat interface for AI insights
 
-### Code Splitting
+### Backend Services
+- Proxy server for API management
+- Data processing pipeline
+- Vector store implementation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## API Endpoints
 
-### Analyzing the Bundle Size
+### Chat API
+```javascript
+POST /chat
+{
+  "input_value": string,
+  "requestId": string
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Data Models
 
-### Advanced Configuration
+### Post Data Structure
+```typescript
+interface PostData {
+  Post_ID: string;
+  Post_Type: 'Reel' | 'Carousel' | 'Static Image | 'Video"';
+  Likes: number;
+  Shares: number;
+  Comments: number;
+  Date_Posted: string;
+  Time_posted: string;
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Running Locally
+```bash
+# Start development server
+node server 
 
-### `npm run build` fails to minify
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Performance Optimizations
+- Virtual scrolling for large datasets
+- Response caching
+- Lazy loading of components
+- Asset optimization
+- Connection pooling
+- Request batching
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Implement changes with tests
+4. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For technical support or queries:
+1. Submit an issue in the GitHub repository
+2. Contact the development team
+3. Check the technical documentation
+
+---
+
+For detailed technical specifications and implementation details, please refer to the complete technical documentation.
