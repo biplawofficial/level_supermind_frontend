@@ -5,18 +5,17 @@ import Krish from '../data/kris.jpeg';
 import Biplaw from '../data/bip.jpeg';
 import Simran from '../data/sim.jpg';
 
-const colors = { 
-  background: '#FFFFFF',    // Pure white background
-  card: '#EDE7F6',          // Soft lavender for cards
-  accent1: '#6A1B9A',       // Deep purple for primary accents
-  accent2: '#9C27B0',       // Bright purple for secondary accents
-  text: '#200D1F',          // Deep purple for primary text
-  textSecondary: '#6E5484', // Muted purple for secondary text
-  border: '#D1C4E9',        // Subtle lavender border
-  hover: '#F3E5F5',         // Very light purple for hover state
-  overlay: 'rgba(237, 231, 246, 0.05)', // Very subtle purple overlay
+const colors = {
+  background: '#0A0A0F',    // Deep dark background
+  card: '#13141A',          // Slightly lighter dark for cards
+  accent1: '#00FF94',       // Neon green
+  accent2: '#32E6E2',       // Cyan
+  text: '#FFFFFF',          // Pure white
+  textSecondary: '#9B9BA5', // Muted text
+  border: '#1E2028',        // Subtle border color
+  hover: '#1A1B23',         // Hover state color
+  overlay: 'rgba(0, 255, 148, 0.05)', // Very subtle green overlay
 };
-
 
 const styles = {
   container: {
@@ -50,7 +49,7 @@ const styles = {
     textShadow: `0 0 10px ${colors.accent1}40`,
   },
   heading: {
-    fontSize: '10rem',
+    fontSize: '4rem',
     marginBottom: '1.5rem',
     fontWeight: '800',
     letterSpacing: '-0.02em',
@@ -59,7 +58,7 @@ const styles = {
     },
   },
   subheading: {
-    fontSize: '2rem',
+    fontSize: '1.25rem',
     color: colors.textSecondary,
     maxWidth: '48rem',
     margin: '0 auto',
@@ -80,7 +79,7 @@ const styles = {
     zIndex: 9,
   },
   sectionHeading: {
-    fontSize: '3rem',
+    fontSize: '2.5rem',
     textAlign: 'center',
     marginBottom: '4rem',
     color: colors.accent1,
@@ -267,13 +266,13 @@ const styles = {
     fontWeight: 'bold',
     padding: '0.75rem 2rem',
     borderRadius: '9999px',
-    fontSize: '1.5rem',
+    fontSize: '1.125rem',
     border: 'none',
     cursor: 'pointer',
     transition: 'all 0.3s ease',
     '&:hover': {
       transform: 'scale(1.05)',
-      background: colors.background,
+      background: 'linear-gradient(to right, #23074d, #cc5333)',
     },
   },
 
@@ -442,7 +441,7 @@ const AboutUs = () => {
         </div>
       </motion.div>
 
-      <section style={{ ...styles.section, background: colors.background }}>
+      <section style={{ ...styles.section, background: 'linear-gradient(to bottom, #000, #111827)' }}>
         <div style={styles.sectionContainer}>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -478,7 +477,7 @@ Let’s turn data into impact—one post at a time
         </div>
       </section>
 
-      <section style={{ ...styles.section, background: colors.background }}>
+      <section style={{ ...styles.section, background: 'linear-gradient(to bottom, #111827, #000)' }}>
         <div style={styles.sectionContainer}>
           <motion.h2
             initial={{ opacity: 0 }}
@@ -514,7 +513,7 @@ Let’s turn data into impact—one post at a time
         </div>
       </section>
 
-      <section style={{ ...styles.section, background: colors.background }}>
+      <section style={{ ...styles.section, background: 'linear-gradient(to bottom, #000, #111827)' }}>
         <div style={styles.sectionContainer}>
           <motion.h2
             initial={{ opacity: 0 }}
@@ -539,7 +538,7 @@ Let’s turn data into impact—one post at a time
         </div>
       </section>
 
-      <section style={{ ...styles.section, background: colors.background }}>
+      <section style={{ ...styles.section, background: 'linear-gradient(to bottom, #111827, #000)' }}>
         <div style={styles.callToAction}>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}

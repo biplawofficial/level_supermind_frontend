@@ -27,7 +27,8 @@ const Chatbot = ({ botAnimation }) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://assign-89sdfs98-backend.vercel.app/api/process', {
+      const response = await fetch('https://level-supermind-backend.onrender.com/api/process', {
+        // const response = await fetch('http://localhost:3000/api/process', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
