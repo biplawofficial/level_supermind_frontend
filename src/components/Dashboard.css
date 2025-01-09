@@ -1,0 +1,109 @@
+/* Container */
+.dashboard-container {
+    background-color: #ffffff82;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    min-height: 100vh;
+    /* border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px; */
+    max-width: 100%;
+  }
+  
+  /* Title */
+  .dashboard-title {
+    font-family: "Oswald", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    text-align: left;
+    padding-left: 2rem;
+  }
+  .mini{
+    color: rgba(0, 0, 0, 0.78);
+    text-align: left;
+    padding-left:4rem;
+    font-weight: 500;
+
+  }
+  .num{
+    color:greenyellow;
+  }
+  /* Metrics */
+  .metrics-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  
+  .metric-card {
+    background-color: #311830;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    padding: 0px;
+    color:white;
+    font-family: "Kanit";
+    border-radius: 8px;
+    text-align: center;
+    width: 22%;
+    
+  }
+  
+  .metric-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    
+  }
+  
+  .metric-card p {
+    font-size: 50px;
+    color: greenyellow;
+    font-weight: bold;
+    margin: 1rem;
+  }
+  
+  /* Charts Section */
+  .charts-section {
+    margin-top: 24px;
+  }
+  
+  .charts-title {
+    margin-top: 1rem;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: left;
+    padding-left:2rem;
+  }
+  
+  .charts-container {
+    display: flex;
+    align-items: center;
+    padding:2.5rem 5.5rem 2.5rem 5.5rem;
+    /* flex-wrap: wrap;
+    flex-direction: column; */
+    gap: 20px;
+    justify-content: space-evenly;
+  }
+  
+  .chart-wrapper {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    align-items: center;
+    /* width:fit-content;
+    min-height: 35rem; */
+    justify-content: space-evenly;
+    /* flex: 1 1 48%;
+    min-width: 300px; */
+    background-color: rgb(255, 255, 255);
+    padding: 13px;
+    border-radius: 10px;
+  }
+  
+  /* Engagement Over Time */
+  .engagement-over-time {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid #444;
+  }
+  

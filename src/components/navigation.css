@@ -1,0 +1,53 @@
+
+
+.c1 {
+  background-color: #200d1f;
+
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 100px;
+    max-height: 5rem;
+    margin: 1rem 6rem 1rem 6rem;
+    
+  }
+
+
+  .analyti {
+    font-family: 'Jersey 15', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    max-height: 20px;
+    padding :1rem 0rem 2rem 2rem ;
+    letter-spacing: 1px;
+
+
+  }
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding :0rem 2rem 0rem 0rem ;
+  }
+  .nav-btn {
+    font-size: 1.2rem;
+    font-family: "kanit";
+    letter-spacing: 1.3px;
+    font-weight: bold;
+    border-radius: 5px;
+   
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nav-btn:hover {
+    background-color: transparent;
+    transform: scale(1.03);
+  }
+  .nav-btn:active {
+    /* background-color: #1c5986; */
+    transform: scale(0.98); 
+  }
+  
