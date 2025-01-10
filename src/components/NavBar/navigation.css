@@ -1,0 +1,171 @@
+/* navigation.css */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+.c1 {
+  background-color: #200d1f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  min-height: 5rem;
+  margin: 1rem 6rem;
+  padding: 0.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.analyti {
+  font-family: 'Jersey 15', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-btn {
+  font-size: 1.2rem;
+  font-family: "kanit";
+  letter-spacing: 1.3px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.03);
+}
+
+.nav-btn:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 70%;
+  max-width: 300px;
+  background-color: #200d1f;
+  transform: translateX(100%);
+  z-index: 1000;
+  padding: 2rem;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .c1 {
+    margin: 1rem 3rem;
+  }
+  
+  .analyti {
+    font-size: 2.5rem;
+  }
+  
+  .nav-btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .c1 {
+    margin: 1rem 2rem;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+  
+  .analyti {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .c1 {
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+  }
+  
+  .analyti {
+    font-size: 1.8rem;
+  }
+  
+  .mobile-menu {
+    width: 85%;
+  }
+}
+
+/* Animation Classes */
+.nav-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.nav-btn:hover::after {
+  transform: translateX(0);
+}
+
+/* Mobile Menu Animation */
+.mobile-menu.open {
+  transform: translateX(0);
+}

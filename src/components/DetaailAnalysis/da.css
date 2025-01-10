@@ -1,0 +1,252 @@
+/* da.css */
+:root {
+  --container-padding-desktop: 2rem;
+  --container-padding-tablet: 1.5rem;
+  --container-padding-mobile: 1rem;
+  --chart-height-desktop: 400px;
+  --chart-height-tablet: 300px;
+  --chart-height-mobile: 250px;
+  --font-size-title-desktop: 2rem;
+  --font-size-title-tablet: 1.75rem;
+  --font-size-title-mobile: 1.25rem;
+}
+
+.analysis-container {
+  padding: var(--container-padding-desktop);
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.analysis-title {
+  font-size: var(--font-size-title-desktop);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.chart-container1 {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  min-width: 0; /* Prevents overflow in grid */
+}
+
+.chart-title1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #444;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.chart-wrapper1 {
+  height: var(--chart-height-desktop);
+  position: relative;
+  width: 100%;
+  min-width: 0; /* Prevents chart overflow */
+}
+
+.full-width {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.table-wrapper1 {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
+  scrollbar-width: thin;
+}
+
+.performance-table {
+  width: 100%;
+  min-width: 750px; /* Minimum width to prevent cramped content */
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.performance-table th,
+.performance-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.performance-table th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+  color: #444;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Larger Screens (1200px and up) */
+@media screen and (min-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.5rem;
+  }
+}
+
+/* Medium-Large Screens (992px to 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem;
+  }
+  
+  .chart-wrapper1 {
+    height: 350px;
+  }
+}
+
+/* Medium Screens (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .analysis-container {
+    padding: var(--container-padding-tablet);
+  }
+
+  .analysis-title {
+    font-size: var(--font-size-title-tablet);
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .chart-wrapper1 {
+    height: var(--chart-height-tablet);
+  }
+  
+  .chart-container1 {
+    padding: 1.25rem;
+  }
+}
+
+/* Small Screens (576px to 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .analysis-container {
+    padding: var(--container-padding-mobile);
+  }
+
+  .analysis-title {
+    font-size: var(--font-size-title-mobile);
+    margin-bottom: 1.5rem;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .chart-wrapper1 {
+    height: var(--chart-height-mobile);
+  }
+
+  .chart-container1 {
+    padding: 1rem;
+  }
+
+  .performance-table th,
+  .performance-table td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Screens (575px and below) */
+@media screen and (max-width: 575px) {
+  .analysis-container {
+    padding: 0.5rem;
+  }
+
+  .analysis-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .chart-wrapper1 {
+    height: 200px;
+  }
+
+  .chart-container1 {
+    padding: 0.75rem;
+  }
+
+  .chart-title1 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .performance-table th,
+  .performance-table td {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Custom scrollbar for table */
+.table-wrapper1::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-wrapper1::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.table-wrapper1::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Loading state styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 1rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

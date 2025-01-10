@@ -1,0 +1,100 @@
+/* Dashboard.css */
+.dashboard-container {
+  background-color: #ffffff82;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dashboard-title {
+  font-family: "Oswald", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(2rem, 5vw, 3.125rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.mini {
+  color: rgba(0, 0, 0, 0.78);
+  text-align: left;
+  padding-left: 2rem;
+  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+
+.metric-card {
+  background-color: #311830;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  padding: 1rem;
+  color: white;
+  font-family: "Kanit";
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metric-card h3 {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  margin-bottom: 0.5rem;
+}
+
+.metric-card p {
+  font-size: clamp(1.5rem, 3vw, 3.125rem);
+  color: greenyellow;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+.charts-section {
+  margin-top: 1.5rem;
+}
+
+.charts-title {
+  margin-top: 1rem;
+  font-size: clamp(1.5rem, 3vw, 2.188rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .charts-container {
+    flex-direction: row;
+    padding: 2.5rem;
+  }
+}
+
+.chart-wrapper {
+  flex: 1;
+  min-height: 300px;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.engagement-over-time {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+}

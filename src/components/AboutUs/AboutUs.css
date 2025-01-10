@@ -1,0 +1,382 @@
+/* Color Variables */
+:root {
+  --background: #FFFFFF;
+  --card: #EDE7F6;
+  --accent1: #6A1B9A;
+  --accent2: #9C27B0;
+  --text: #200D1F;
+  --text-secondary: #6E5484;
+  --border: #D1C4E9;
+  --hover: #F3E5F5;
+  --overlay: rgba(237, 231, 246, 0.05);
+}
+
+/* Base styles */
+.container {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text);
+  overflow-x: hidden;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--background);
+  padding: 2rem 1rem;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, var(--overlay), transparent 70%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 9;
+  text-align: center;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.neon-text {
+  color: var(--accent1);
+  text-shadow: 0 0 10px rgba(106, 27, 154, 0.25);
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.section {
+  padding: 3rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 9;
+  padding: 0 1rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--accent1);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Grid layouts */
+.grid, .stat-grid, .testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Cards */
+.team-member-card {
+  background-color: var(--card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  width: 100%;
+}
+
+.team-member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -20px rgba(106, 27, 154, 0.19);
+  background-color: var(--hover);
+}
+
+.testimonial-card {
+  padding: 1.5rem;
+  background-color: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -20px rgba(106, 27, 154, 0.19);
+  background-color: var(--hover);
+}
+
+.stat-card {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -20px rgba(106, 27, 154, 0.19);
+  background-color: var(--hover);
+}
+
+/* Team member styles */
+.member-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--accent1);
+  object-fit: cover;
+}
+
+.member-name {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.member-title {
+  color: var(--accent1);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.member-bio {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Stats styles */
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent1);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Testimonial styles */
+.testimonial-text {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  color: var(--accent1);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.testimonial-company {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Call to action styles */
+.call-to-action {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.button {
+  background: linear-gradient(to right, #23074d, #cc5333);
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.social-link {
+  background-color: transparent;
+  color: var(--accent1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid var(--accent1);
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: .8rem;
+}
+
+.social-link:hover {
+  background-color: var(--accent1);
+  color: var(--background);
+}
+
+/* Mission text styles */
+.mission-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 48rem;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 640px) {
+  .heading {
+    font-size: 4rem;
+  }
+  
+  .subheading {
+    font-size: 1.5rem;
+  }
+  
+  .grid, .stat-grid, .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .button {
+    padding: 1rem 2rem;
+  }
+  
+  .section {
+    padding: 4rem 2rem;
+  }
+  
+  .member-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .heading {
+    font-size: 5rem;
+  }
+  
+  .section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .member-name {
+    font-size: 1.5rem;
+  }
+  
+  .member-bio {
+    font-size: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 6rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .stat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .section {
+    padding: 5rem 2rem;
+  }
+  
+  .member-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .button {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 4rem;
+  }
+  
+  .heading {
+    font-size: 7rem;
+  }
+  
+  .section-container {
+    padding: 0 2rem;
+  }
+}

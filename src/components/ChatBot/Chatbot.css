@@ -1,0 +1,394 @@
+/* General styling */
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #7363c3;
+ 
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+/* Initial screen styling */
+.chatbot-initial-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  padding-top: 2rem;
+}
+
+.bot-animation-container {
+  width: 400px;
+  height: 400px;
+
+}
+
+.chatbot-greeting {
+  font-size: 80px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 18px;
+  margin-top: 0px;
+}
+
+.chatbot-intro {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.get-started-btn {
+  background-color: #7363c3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.get-started-btn:hover {
+  background-color: #5c4eb3;
+}
+
+.fix 
+{
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  height: 50rem;
+  margin-left: 10rem;
+  max-width: 80%;
+}
+
+/* Header styling */
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  background-color: #311830;
+  
+  color: white;
+  padding: 15px 20px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.bot-animation-small {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Chat messages styling */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.message-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.message-bubble {
+  max-width: 70%;
+  font-size: 18px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  line-height: 1.5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px;
+}
+
+.message-user {
+  justify-content: flex-end;
+  color: white;
+  background-color: #7363c3;
+  align-self: flex-end;
+  border-radius: 10px 10px 0px 10px;
+}
+
+.message-bot {
+  color: #333;
+  background-color: #f6f2ff;
+}
+
+.bot-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+/* Loading animation styling */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #7363c3;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Input area styling */
+.chat-input-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 25px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1.2rem;
+  border: none;
+  background: transparent;
+  color: #333;
+  outline: none;
+}
+
+.chat-input::placeholder {
+  color: #7363c3;
+  opacity: 0.6;
+}
+
+.send-btn {
+  background-color: #7363c3;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.send-btn:hover {
+  background-color: #5c4eb3;
+}
+
+.send-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.send-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive styles for Chatbot */
+@media screen and (max-width: 1200px) {
+  .fix {
+    margin-left: 5rem;
+    max-width: 85%;
+  }
+
+  .bot-animation-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .chatbot-greeting {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fix {
+    margin-left: 2rem;
+    max-width: 90%;
+    height: calc(100vh - 100px);
+  }
+
+  .bot-animation-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .chatbot-greeting {
+    font-size: 48px;
+  }
+
+  .chatbot-intro {
+    font-size: 18px;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .message-bubble {
+    max-width: 85%;
+    font-size: 16px;
+  }
+
+  .chat-input {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .send-btn {
+    padding: 8px;
+  }
+
+  .send-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fix {
+    margin-left: 1rem;
+    max-width: 95%;
+  }
+
+  .bot-animation-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .chatbot-greeting {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .chatbot-intro {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .get-started-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .bot-animation-small {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .chatbot-header {
+    padding: 10px 15px;
+  }
+
+  .chat-messages {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .message-container {
+    margin-bottom: 10px;
+  }
+
+  .bot-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+
+  .chat-input-container {
+    padding: 15px;
+  }
+
+  .input-wrapper {
+    padding: 6px;
+  }
+}
+
+/* Handle very small screens */
+@media screen and (max-width: 320px) {
+  .fix {
+    margin-left: 0.5rem;
+    max-width: 98%;
+  }
+
+  .chatbot-greeting {
+    font-size: 32px;
+  }
+
+  .message-bubble {
+    max-width: 90%;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+
+/* Handle height-based media queries for better vertical spacing */
+@media screen and (max-height: 700px) {
+  .bot-animation-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .chatbot-greeting {
+    margin-bottom: 10px;
+  }
+
+  .chatbot-intro {
+    margin-bottom: 15px;
+  }
+}
